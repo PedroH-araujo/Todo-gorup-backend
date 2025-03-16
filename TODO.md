@@ -1,7 +1,10 @@
  - check the database
  - connect docker to the database
 
- authentication
+ authentication {
+  - register
+  - jwt token
+ }
 
  - users table
  - tasks table
