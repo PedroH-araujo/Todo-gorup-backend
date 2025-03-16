@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: postgres:15
+    ports:
+      - "5450:5432"
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: localhost
+      POSTGRES_DB: todo
+    volumes:
+      - ./data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

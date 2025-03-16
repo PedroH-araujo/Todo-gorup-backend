@@ -8,17 +8,18 @@
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "test": "cd server && jest",
     "test:watch": "cd server && jest --watch",
-    "start": "cd server && node server.js"
+    "start": "cd server && node server.js",
+    "recreate": "cd server && npx knex migrate:rollback --all && npx knex migrate:latest"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.4.7",
     "express": "^4.16.4",
     "jest": "^24.9.0",
-    "knex": "^0.20.5",
+    "knex": "^3.1.0",
     "lodash": "^4.17.15",
     "nodemon": "^2.0.2",
-    "pg": "^7.14.0",
+    "pg": "^8.14.0",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
