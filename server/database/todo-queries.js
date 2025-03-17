@@ -9,8 +9,8 @@ async function get(id) {
     return results[0];
 }
 
-async function create(title, order) {
-    const results = await knex('todos').insert({ title, order }).returning('*');
+async function createTask(task) {
+    const results = await knex('tasks').insert(task).returning('*');
     return results[0];
 }
 
@@ -32,7 +32,7 @@ async function clear() {
 module.exports = {
     all,
     get,
-    create,
+    createTask,
     update,
     delete: del,
     clear
